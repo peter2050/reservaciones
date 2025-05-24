@@ -1,0 +1,68 @@
+{
+  "reservations": [
+    {
+      "id": 1,
+      "customerName": "Juan Pérez",
+      "date": "2024-02-01",
+      "time": "19:00",
+      "numberOfPeople": 4,
+      "status": "confirmada"
+    },
+    {
+      "id": 2,
+      "customerName": "María García",
+      "date": "2024-02-02",
+      "time": "20:30",
+      "numberOfPeople": 2,
+      "status": "pendiente"
+    },
+    {
+      "id": 3,
+      "customerName": "Carlos Rodríguez",
+      "date": "2024-02-03",
+      "time": "13:00",
+      "numberOfPeople": 6,
+      "status": "confirmada"
+    },
+    {
+      "id": 4,
+      "customerName": "Ana López",
+      "date": "2024-02-04",
+      "time": "18:00",
+      "numberOfPeople": 3,
+      "status": "cancelada"
+    },
+    {
+      "id": 5,
+      "customerName": "Pedro Martínez",
+      "date": "2024-02-05",
+      "time": "21:00",
+      "numberOfPeople": 5,
+      "status": "confirmada"
+    },
+    {
+      "id": 6,
+      "customerName": "Laura Sánchez",
+      "date": "2024-02-06",
+      "time": "19:30",
+      "numberOfPeople": 2,
+      "status": "pendiente"
+    },
+    {
+      "id": 7,
+      "customerName": "David Gómez",
+      "date": "2024-02-07",
+      "time": "14:00",
+      "numberOfPeople": 1,
+      "status": "confirmada"
+    },
+    {
+      "id": 8,
+      "customerName": "Sofía Díaz",
+      "date": "2024-02-08",
+      "time": "20:00",
+      "numberOfPeople": 4,
+      "status": "confirmada"
+    }
+  ]
+}

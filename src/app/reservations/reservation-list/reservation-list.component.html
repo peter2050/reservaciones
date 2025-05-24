@@ -1,0 +1,56 @@
+<div class="card">
+  <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+    <h5 class="mb-0">Lista de Reservaciones</h5>
+  </div>
+  
+  <div class="card-body">
+    <!-- Filtros -->
+    <div class="row mb-4">
+      <div class="col-md-3">
+        <input type="text" class="form-control" placeholder="Buscar por nombre..." [(ngModel)]="searchTerm">
+      </div>
+      <div class="col-md-3">
+        <select class="form-select" [(ngModel)]="statusFilter">
+          <option value="">Todos los estados</option>
+          <option value="pending">Pendiente</option>
+          <option value="confirmed">Confirmado</option>
+          <option value="cancelled">Cancelado</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <input type="date" class="form-control" [(ngModel)]="dateFilter">
+      </div>
+    </div>
+
+    <!-- Tabla -->
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead class="table-light">
+          <tr>
+            <th (click)="sort('customerName')">Cliente ⇅</th>
+            <th (click)="sort('date')">Fecha ⇅</th>
+            <th (click)="sort('time')">Hora ⇅</th>
+            <th (click)="sort('numberOfPeople')">Personas ⇅</th>
+            <th (click)="sort('status')">Estado ⇅</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let reservation of filteredReservations">
+            <td>{{ reservation.customerName }}</td>
+            <td>{{ reservation.date | date:'dd/MM/yyyy' }}</td>
+            <td>{{ reservation.time }}</td>
+            <td>{{ reservation.numberOfPeople }}</td>
+            <td>
+              <span class="badge" [ngClass]="{
+                'bg-warning': reservation.status === 'pending',
+                'bg-success': reservation.status === 'confirmed',
+                'bg-danger': reservation.status === 'cancelled'
+              }">{{ reservation.status }}</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<p>reservation-list works!</p>
